@@ -1,2 +1,2 @@
 # Django
-hw_by_a.kachur
+home_works_by_geek_brain_student_a.kachur
