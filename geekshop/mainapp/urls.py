@@ -19,13 +19,9 @@ from django.contrib import admin
 from django.urls import path
 import mainapp.views as mainapp
 
+app_name = 'mainapp'
+
 urlpatterns = [
-    path("", mainapp.main, name="main"),
-    path("products/", include("mainapp.urls", namespace="mainapp")),
-    path("contact/", mainapp.contact, name="contact"),
-    path("admin/", admin.site.urls),
+    path("", mainapp.products, name="index"),
+    path("<int:pk>/", mainapp.products, name="category"),
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
