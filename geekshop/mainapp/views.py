@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from mainapp.models import Produtct, ProductCategory
+from mainapp.models import Product, ProductCategory
 from django.conf import settings
-# Create your views here.
+
 
 def main(request):
     title = 'главная'

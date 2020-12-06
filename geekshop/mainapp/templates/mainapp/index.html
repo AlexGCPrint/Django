@@ -6,12 +6,13 @@
 				<a href="/" class="logo"></a>
 				{% include 'mainapp/includes/inc_main_menu.html' %}
 				<a href="#" class="search"></a>
+				<a href="#" class="basket"></a>
 			</div>
 			<div class="text-slider">
 				<h3 class="green">тенденции</h3>
 				<h3 class="big"> удобные стулья</h3>
 				<p>Новый уровень комфорта. Отличные характеристики.</p>
-				<a href="#" class="button-order">заказать <img src="{% static '/img/arrow.png' %}" alt=""></a>
+				<a href="#" class="button-order">заказать<img src="{% static '/img/arrow.png' %}" alt=""></a>
 			</div>	
 			<div class="navi">
 				<a href="#"></a><a href="#"></a><a href="#"></a>
@@ -28,24 +29,15 @@
 		</div>
 		<div class="tab-content">
 			{% for product in products %}
-				<div class="block">
-					<a href="#"><img src="{% static '/img/product-1.jpg' %}" alt="">
-						<div class="text">
-							<img src="{% static '/img/icon-hover.png' %}" alt="img">
-							<h4>Отличный стул</h4>
-							<p>Расположитесь комфортно. </p>
-						</div>
-					</a>
-				</div>
-				<div class="block">
-					<a href="#"><img src="/media/{{ product.image }}" alt="{{ product.alt }}">
-						<div class="text">
-							<img src="{ % static 'img/icon-hover.png' %}" alt="{{ product.alt }}">
-							<h4>{{ product.name }}</h4>
-							<p>{{ product.short_desc }} </p>
-						</div>
-					</a>
-				</div>
+			<div class="block">
+				<a href="#"><img src="/media/{{ product.image }}" alt="{{ product.alt }}">
+					<div class="text">
+						<img src="{ % static 'img/icon-hover.png' %}" alt="{{ product.alt }}">
+						<h4>{{ product.name }}</h4>
+						<p>{{ product.short_desc }} </p>
+					</div>
+				</a>
+			</div>
 			{% endfor %}
 		</div>
 	</div>
