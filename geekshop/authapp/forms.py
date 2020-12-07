@@ -1,5 +1,5 @@
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
-from django.forms import forms
+import django.forms as forms
 
 from .models import ShopUser
 
@@ -40,8 +40,8 @@ class ShopUserEditForm(UserChangeForm):
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'
             field.help_text = ''
-            # if field_name == 'password':
-            #     field.widget = forms.HiddenInput()
+            if field_name == 'password':
+                field.widget = forms.HiddenInput()
 
 
     def clean_age(self):
