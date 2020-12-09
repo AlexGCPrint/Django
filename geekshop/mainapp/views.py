@@ -5,6 +5,7 @@ from django.conf import settings
 
 def main(request):
     title = 'главная'
+
     products = Product.objects.all()[:4]
     content ={
         'title': title,
