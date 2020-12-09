@@ -18,6 +18,10 @@
 <body>
     <div class="container">
         {% block menu %}
+<!--            <div class="header clearfix">-->
+<!--                <a href="/" class="logo"></a>-->
+                {% include 'mainapp/includes/inc_main_menu.html' %}
+<!--            </div>-->
         {% endblock %}
 
         {% block content %}
